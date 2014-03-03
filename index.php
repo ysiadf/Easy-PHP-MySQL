@@ -20,12 +20,14 @@ print "\n\r";
 //Use built in functions to make one line queries.
 $rowarray = $get->fetch($selectusers);  //fetch() fetches the associated rows.
 
-print "<table><tr>\n\r";  
+print "<table>\n\r";  
 foreach ($rowarray as $row) {
+    print "<tr>\n\r";  
     foreach ($row as $col) {
         print "\t<td>$col</td>\n\r";
     }
-    print "</tr>\n\r</table></BODY></HTML>";
-}  
+    print "</tr>\n\r";
+}
+print "</table></BODY></HTML>";
 
 ?>
